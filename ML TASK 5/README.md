@@ -1,174 +1,92 @@
-Churn Modelling Dataset
+# Customer Churn Prediction
 
-Project Overview
+## 📌 Project Overview
 
-This dataset contains customer information from a banking business and is commonly used for customer churn prediction.
+This project is based on **Customer Churn Prediction using Machine Learning**. The main objective is to predict whether a customer will leave the bank or continue using its services.
 
-The main objective is to analyze customer characteristics and predict whether a customer is likely to leave the bank.
+The model analyzes different customer details such as credit score, age, balance, tenure, number of products, and activity status to identify customers who are likely to churn.
 
-Dataset: Churn Modelling
+## 📂 Dataset
 
-Records: 10,000 customers
+The dataset contains customer information such as:
 
-Features: 13 input columns
+* Credit Score
+* Geography
+* Gender
+* Age
+* Tenure
+* Balance
+* Number of Products
+* Has Credit Card
+* Is Active Member
+* Estimated Salary
 
-Target: Exited
+### Target Variable
 
-Problem Type: Binary Classification
+**Exited**
 
-Dataset Columns
+* `0` - Customer did not leave the bank
+* `1` - Customer left the bank
 
-Column
+## ⚙️ Technologies Used
 
-Description
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
 
-RowNumber
+## 🔄 Data Preprocessing
 
-Unique row number
+The following steps are performed:
 
-CustomerId
+1. Load the dataset
+2. Check for missing values
+3. Remove unnecessary columns
+4. Encode categorical variables
+5. Split the dataset into training and testing data
+6. Apply feature scaling
+7. Prepare the data for machine learning
 
-Unique customer ID
+## 🤖 Machine Learning Model
 
-Surname
+Machine Learning algorithms are used to train the dataset and predict customer churn.
 
-Customer surname
+The project helps identify customers who may potentially leave the bank based on their personal, financial, and account-related information.
 
-CreditScore
+## 🚀 Project Workflow
 
-Customer's credit score
+Dataset
+↓
+Data Preprocessing
+↓
+Feature Engineering
+↓
+Train-Test Split
+↓
+Feature Scaling
+↓
+Model Training
+↓
+Prediction
+↓
+Model Evaluation
 
-Geography
+## 📁 Project Structure
 
-Customer's country/region
+```text
+Customer-Churn-Prediction/
+│
+├── Churn_Modelling.csv
+├── churn_prediction.ipynb
+└── README.md
+```
 
-Gender
+## 🎯 Project Objective
 
-Customer gender
+The main objective of this project is to build a machine learning model that can predict customer churn and help banks identify customers who are at risk of leaving.
 
-Age
+## 📊 Expected Outcome
 
-Customer age
-
-Tenure
-
-Number of years the customer has been with the bank
-
-Balance
-
-Customer's account balance
-
-NumOfProducts
-
-Number of bank products used by the customer
-
-HasCrCard
-
-Whether the customer has a credit card (1 = Yes, 0 = No)
-
-IsActiveMember
-
-Whether the customer is an active member (1 = Yes, 0 = No)
-
-EstimatedSalary
-
-Estimated customer salary
-
-Exited
-
-Target variable: 1 = Customer left the bank, 0 = Customer stayed
-
-Target Variable
-
-The target column is:
-
-Exited
-
-0 → Customer stayed
-
-1 → Customer exited/churned
-
-This makes the dataset suitable for supervised machine learning classification.
-
-Suggested Machine Learning Workflow
-
-Load the CSV dataset.
-
-Explore the data using descriptive statistics and visualizations.
-
-Check for missing values and duplicate records.
-
-Remove identifier columns that are not useful for prediction, such as RowNumber and CustomerId.
-
-Encode categorical columns such as Geography and Gender.
-
-Split the data into training and testing sets.
-
-Scale numerical features when required.
-
-Train classification models.
-
-Evaluate the models using suitable classification metrics.
-
-Use the best-performing model to predict customer churn.
-
-Possible Machine Learning Algorithms
-
-You can experiment with:
-
-Logistic Regression
-
-Decision Tree
-
-Random Forest
-
-K-Nearest Neighbors (KNN)
-
-Support Vector Machine (SVM)
-
-Gradient Boosting
-
-XGBoost
-
-Example Python Setup
-
-import pandas as pd
-
-df = pd.read_csv("Churn_Modelling (3) - Churn_Modelling (3).csv")
-
-print(df.head())
-print(df.shape)
-print(df.info())
-print(df.isnull().sum())
-
-Dataset Statistics
-
-Total rows: 10,000
-
-Total columns: 14
-
-Numerical and categorical features are included.
-
-The target variable is Exited.
-
-Project Goal
-
-The goal of a churn modelling project using this dataset is to build a machine learning model that can identify customers who are at higher risk of leaving the bank.
-
-Such a model can help a bank:
-
-Identify customers at risk of churn
-
-Understand important churn factors
-
-Plan customer retention strategies
-
-Improve customer satisfaction
-
-Reduce customer loss
-
-File
-
-The dataset is provided as a CSV file:
-
-Churn_Modelling (3) - Churn_Modelling (3).csv
+The trained machine learning model predicts whether a customer is likely to stay with the bank or leave the bank. This can help businesses take appropriate customer retention strategies.
